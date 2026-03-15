@@ -292,7 +292,7 @@ class ApiService {
       .on(
         'postgres_changes',
         { event: '*', schema: 'public', table: 'simulations' },
-        (payload) => {
+        (payload: any) => {
           callback(payload.new as Simulation);
         }
       )
@@ -305,7 +305,7 @@ class ApiService {
       .on(
         'postgres_changes',
         { event: '*', schema: 'public', table: 'ai_interactions' },
-        (payload) => {
+        (payload: any) => {
           callback(payload.new as AIInteraction);
         }
       )
@@ -318,7 +318,7 @@ class ApiService {
       .on(
         'postgres_changes',
         { event: '*', schema: 'public', table: 'performance_metrics' },
-        (payload) => {
+        (payload: any) => {
           callback(payload.new as PerformanceMetric);
         }
       )
