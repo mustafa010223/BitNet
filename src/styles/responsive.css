@@ -1,0 +1,100 @@
+:root {
+  --mobile: 640px;
+  --tablet: 768px;
+  --laptop: 1024px;
+  --desktop: 1280px;
+}
+
+@media (max-width: 768px) {
+  .ai-assistant {
+    width: calc(100vw - 2rem) !important;
+    height: 70vh !important;
+    bottom: 1rem !important;
+    right: 1rem !important;
+  }
+
+  .building-info-panel {
+    width: calc(100vw - 2rem) !important;
+    top: auto !important;
+    bottom: 1rem !important;
+    left: 1rem !important;
+    right: 1rem !important;
+  }
+
+  .city-controls {
+    bottom: 1rem !important;
+    left: 1rem !important;
+    max-width: calc(100vw - 2rem) !important;
+  }
+
+  .dashboard-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .header-title {
+    font-size: 1rem !important;
+  }
+
+  .header-tabs {
+    gap: 0.5rem !important;
+  }
+
+  .header-tabs button {
+    padding: 0.5rem 0.75rem !important;
+    font-size: 0.875rem !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .ai-assistant {
+    height: 60vh !important;
+  }
+
+  .notification-system {
+    top: 0.5rem !important;
+    right: 0.5rem !important;
+    left: 0.5rem !important;
+    max-width: 100% !important;
+  }
+
+  .chart-container {
+    height: 250px !important;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .ai-assistant {
+    width: 380px !important;
+  }
+
+  .building-info-panel {
+    width: 300px !important;
+  }
+
+  .dashboard-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media (min-width: 1025px) {
+  .dashboard-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (hover: none) and (pointer: coarse) {
+  button, .clickable {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
